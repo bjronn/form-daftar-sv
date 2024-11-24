@@ -18,7 +18,7 @@
         <input type="email" id="email" name="email" placeholder="msbreww@gmail.com" required>
 
         <label for="phone">No. Telegram / WhatsApp:</label>
-        <input maxlength="13" autocomplete="off" placeholder="Masukan nomor wa atau telegram anda" id="phone" name="phone" type="tel" required>
+        <input maxlength="13" autocomplete="off" placeholder="Masukan nomor wa atau telegram anda" data-val="true" data-val-length="The field Phone must be a string with a minimum length of 10 and a maximum length of 13." data-val-length-max="13" data-val-length-min="10" data-val-regex="The field Phone must match the regular expression '^[0-9]+$'." data-val-regex-pattern="^[0-9]+$" id="phone" name="phone" type="tel" onkeypress="return isNumberKey(event)" required>
 
         <label for="bank">Bank / E-wallet:</label>
         <select id="bank" name="bank" required>
@@ -45,7 +45,7 @@
         <input type="text" id="account_name" name="account_name" placeholder="Masukan nama lengkap anda" required>
 
         <label for="account_number">Nomor Rekening:</label>
-        <input maxlength="20" autocomplete="off" placeholder="Masukan nomor rekening anda" id="account_number" name="account_number" type="tel" required>
+        <input maxlength="20" autocomplete="off" placeholder="Masukan nomor rekening anda" data-val="true" data-val-regex="'^[0-9]+$'." data-val-regex-pattern="^[0-9]+$" data-val-required="Silahkan isi Rekening anda." id="account_number" name="account_number" type="tel" onkeypress="return isNumberKey(event)" required>
 
         <label for="game">Jenis Permainan:</label>
         <select id="game" name="game" required>
