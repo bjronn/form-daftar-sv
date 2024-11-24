@@ -63,10 +63,20 @@
 </div>
 
 <script type="text/javascript">
-    document.getElementById('registrationForm').addEventListener('submit', async function(e) {
-        e.preventDefault(); // Mencegah form disubmit secara default
 
-        // Mengambil data dari form
+    function isNumberKey(event) {
+            keycode = event.keyCode;
+            if (keycode > 47 && keycode < 58) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+    document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
         const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
@@ -75,7 +85,6 @@
         const account_number = document.getElementById('account_number').value;
         const game = document.getElementById('game').value;
 
-        // Kirim data ke API Worker
         const response = await fetch('https://api.svenus38.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
